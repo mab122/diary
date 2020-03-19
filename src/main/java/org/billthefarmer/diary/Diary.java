@@ -148,11 +148,11 @@ public class Diary extends Activity
         Pattern.compile("^ ?\\[([<#>])\\]: ?#(?: ?\\((\\d+)\\))? *$",
                         Pattern.MULTILINE);
     public final static Pattern FILE_PATTERN =
-        Pattern.compile("([0-9]{4}).([0-9]{2}).([0-9]{2}).txt$");
+        Pattern.compile("([0-9]{4}).([0-9]{2}).([0-9]{2}).md$");
 
     public final static String YEAR_DIR = "^[0-9]{4}$";
     public final static String MONTH_DIR = "^[0-9]{2}$";
-    public final static String DAY_FILE = "^[0-9]{2}.txt$";
+    public final static String DAY_FILE = "^[0-9]{2}.md$";
 
     public final static String ZIP = ".zip";
     public final static String HELP = "help.md";
@@ -1761,7 +1761,7 @@ public class Diary extends Activity
     private File getDay(int year, int month, int day)
     {
         return new File(getMonth(year, month), String.format(Locale.ENGLISH,
-                                                             "%02d.txt", day));
+                                                             "%02d.md", day));
     }
 
     // getFile
